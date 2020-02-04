@@ -803,7 +803,7 @@ Optional argument STYLE is currently ignored."
 (defun sml-beginning-of-defun ()
   (let ((sym (sml-find-matching-starter sml-starters-syms)))
     (if (member sym '("fun" "and" "functor" "signature" "structure"
-		      "abstraction" "datatype" "abstype"))
+                      "struct" "sig" "abstraction" "datatype" "abstype"))
 	(save-excursion (sml-forward-sym) (sml-forward-spaces)
 			(sml-forward-sym))
       ;; We're inside a "non function declaration": let's skip all other
