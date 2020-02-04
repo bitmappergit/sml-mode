@@ -172,8 +172,8 @@ notion of \"the end of an outline\".")
 
 (defconst sml-indent-rule
   (sml-preproc-alist
-   `(("struct" . 0)
-     (,sml-module-head-syms "d=" 0)
+   `(;;;("struct" . 0)
+     ;;;(,sml-module-head-syms "d=" 0)
      ("local" "in" 0)
      ;;("of" . (3 nil))
      ;;("else" . (sml-indent-level 0))
@@ -238,7 +238,7 @@ for all symbols and in all lines starting with the given symbol."
 	  '("abstype" "datatype" "exception" "fun"
 	    "local" "infix" "infixr" "sharing" "nonfix"
 	    "open" "type" "val" "and"
-	    "withtype" "with"))
+	    "withtype" "with" "struct" "sig"))
   "The starters of new expressions.")
 
 (defconst sml-exptrail-syms
